@@ -1,8 +1,8 @@
-# Your Name Here
+# Jhett Carr
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# Submission Date: 10/30/2024
+# Lab 07
+# Lab Section: 15
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -17,9 +17,23 @@
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
 
-factorial = 1
+while True:
+    n = input("Please enter an upper-bound number: ")
 
-print(f"The result of the factorial based on the given bound is {factorial}")
+    if n.isdigit():
+        n = int(n)
+        if n >= 0:
+            factorial = 1
+            var = n
+            while var > 0:
+                factorial = factorial * var
+                var = var - 1
+            print(f"The factorial is {factorial}")
+            break 
+        else:
+                print("Enter a positive number")
+    else:
+        print("Invalid input, enter a positive number")
 
 print("*"*75)
 # Create a while loop that prompts a user for input of an integer values
@@ -37,7 +51,16 @@ print("*"*75)
 # All this together means you will have an intensive while loop that includes multiple if statements, likely with some nesting 
 # The sum should start at 0 
 
-num_sum = 0 
+num_sum = 0
+while True:
+    num = input("Enter a number or 'exit' to quit: ")
+    if num.lower() == "exit" :
+        break
+    if num.isdigit() or (num[0] == "-" and num[1:].isdigit()):
+        number = int(num)
+        num_sum += number
+    else:
+        print("Invalid input, enter a number or 'exit' to quit")
 
 print(f"Your final sum is {num_sum}")
 
