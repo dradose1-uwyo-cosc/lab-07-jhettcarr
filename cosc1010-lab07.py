@@ -4,9 +4,11 @@
 # Lab 07
 # Lab Section: 15
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Kaleb Moler
+# Jay Trujillo
+# Ireeann Anderson
+# Openstax / reddit 
+# Replit
 
 
 # Prompt the user for an upper bound 
@@ -82,4 +84,47 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
-        
+def calc(val_1, oper, val_2):
+    if(oper == "+"):
+        return(val_1 + val_2)
+    elif(oper == "-"):
+        return(val_1 - val_2)
+    elif(oper == "*"):
+        return(val_1 * val_2)
+    elif(oper == "/"):
+        if(val_2 != 0):
+              return(val_1 / val_2)
+        else:
+            return("Cannot divide by zero, try again")
+    elif(oper == "%"):
+        return(val_1 % val_2)
+    else:
+        return("Invalid operation, try again")
+
+def user_calc():
+    while True:
+        inp = input("Enter an equation (eg. 5+5, 10/2, etc.) using +, -, *, /, %, or 'exit' to quit: ")
+        if inp.lower() == "exit" :
+            break
+        inp = inp.replace(" ", "")
+        v1 = ""
+        v2 = ""
+        oper = ""
+        move = False
+
+        for char in inp:
+            if char.isdigit() and not move:
+                v1 += char
+            elif char.isdigit() and move:
+                v2 += char
+            else:
+                oper = char
+                move = True
+        if v1 and v2 and oper:
+            v1 = int(v1)
+            v2 = int(v2)
+            print(calc(v1, oper, v2))
+        else:
+            print("Invalid input, please input an equation")
+
+user_calc()
