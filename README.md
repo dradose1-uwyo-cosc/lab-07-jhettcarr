@@ -1,12 +1,14 @@
-# [Name]
-## [Assignment #]
-## [Submission date: MM/DD/YY]
+# Jhett Carr
+## [Assignment #7]
+## [Submission date: 10/30/2024]
 ## Worked with/sources 
-* example
-* example
-* example
-* example
+* Kaleb Moler
+* Jay Trujillo
+* Ireeann Anderson
+* Openstax / reddit 
+* Replit
 ## Project Quirks/ Things that don't work
 * example
 * example
 * example
+
